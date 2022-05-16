@@ -1,4 +1,4 @@
-package zenner.community.zenner.controller.dto;
+package zenner.community.zenner.dto;
 
 import java.security.SecureRandom;
 
@@ -7,7 +7,7 @@ public class AccessTokenDto {
     private String client_secret;
     private String code;
     private String redirect_uri;
-
+    private String state;
     public String getClient_id() {
         return client_id;
     }
@@ -30,6 +30,14 @@ public class AccessTokenDto {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getRedirect_uri() {
